@@ -1,0 +1,36 @@
+# Dependências do Node — não fazer deploy destas pastas
+node_modules/
+.next/
+out/
+
+# Logs
+*.log
+dev.log
+server.log
+
+# Prisma
+db/*.db
+
+# Variáveis de ambiente
+.env
+.env.local
+.env.production
+
+# Mini-services
+mini-services/
+
+# Scripts internos
+.zscripts/
+
+# Upload (arquivos temporários)
+upload/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
