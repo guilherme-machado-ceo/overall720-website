@@ -1,58 +1,63 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, Clock, ArrowRight, Tag } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { BookOpen, ExternalLink, Tag, GitBranch } from "lucide-react";
 
-/* ───────────────────────── BLOG & INSIGHTS SECTION ───────────────────────── */
+/* ───────────────────────── BLOG & PUBLICAÇÕES REAIS ───────────────────────── */
 
-const articles = [
+const publications = [
   {
-    id: "geopolitica-nova-ordem",
-    category: "Geopolítica",
-    title: "A Nova Ordem Multipolar: Riscos e Oportunidades para o Brasil",
+    id: "imip-paper",
+    category: "Research Paper",
+    title: "IMIP Framework v1.0.0 — Constitutional Architecture for AGI",
     excerpt:
-      "Análise das dinâmicas de poder emergentes no sistema internacional e seu impacto estratégico para organizações brasileiras que atuam em escala global.",
-    date: "15 Mai 2026",
-    readTime: "8 min",
+      "Apresenta o Framework de Instância Múltipla Integrada do Pensamento (IMIP) — modelo formal no qual um mesmo sujeito cognitivo opera simultaneamente em instâncias científica, artística e empreendedora. Propõe que o alinhamento em IAG pode ser resolvido por design constitucional de instâncias.",
+    date: "2025",
     color: "#d4a853",
     colorBg: "rgba(212, 168, 83, 0.1)",
     borderColor: "rgba(212, 168, 83, 0.2)",
     hoverGlow: "rgba(212, 168, 83, 0.06)",
+    url: "https://doi.org/10.5281/zenodo.19772798",
+    urlLabel: "doi.org/10.5281/zenodo.19772798",
+    type: "paper" as const,
   },
   {
-    id: "politech-imip-framework",
-    category: "Politech",
-    title: "IMIP Framework: Alinhamento Constitucional como Terceiro Paradigma para IAG",
+    id: "imip-code",
+    category: "Código Fonte",
+    title: "IMIP Framework — Implementação Computacional",
     excerpt:
-      "Como a Instanciação Múltipla Integrada do Pensamento propõe resolver o problema de alinhamento em Inteligência Artificial Geral por design constitucional de instâncias.",
-    date: "10 Mai 2026",
-    readTime: "12 min",
+      "Código-fonte que implementa os cinco componentes da arquitetura IMIP: GuruMatrix 5D, Protocolo IPII (OPDIN), Contencionamento Constitucional, Operador de Analogia Transdomínios e Regime de Fluxo Contínuo.",
+    date: "2025",
     color: "#0ea5e9",
     colorBg: "rgba(14, 165, 233, 0.1)",
     borderColor: "rgba(14, 165, 233, 0.2)",
     hoverGlow: "rgba(14, 165, 233, 0.06)",
+    url: "https://doi.org/10.5281/zenodo.19775021",
+    urlLabel: "doi.org/10.5281/zenodo.19775021",
+    type: "code" as const,
   },
   {
-    id: "governanca-esg-ia",
-    category: "Governança & Sustentabilidade",
-    title: "ESG e Governança Global: O Papel da Inteligência na Tomada de Decisão Sustentável",
+    id: "imip-github",
+    category: "Repositório",
+    title: "IMIP Framework — GitHub",
     excerpt:
-      "Frameworks avançados de governança corporativa que integram dados climáticos, indicadores ESG e inteligência artificial para posicionamento sustentável em escala global.",
-    date: "05 Mai 2026",
-    readTime: "6 min",
+      "Repositório completo do IMIP Framework no GitHub. Inclui a linguagem de programação GuruDev, a Álgebra Hexarrelacional de Significância e toda a documentação da arquitetura de instâncias cognitivas para IAG.",
+    date: "2025",
     color: "#34d399",
     colorBg: "rgba(52, 211, 153, 0.1)",
     borderColor: "rgba(52, 211, 153, 0.2)",
     hoverGlow: "rgba(52, 211, 153, 0.06)",
+    url: "https://github.com/guilherme-machado-ceo/imip-framework",
+    urlLabel: "github.com/guilherme-machado-ceo/imip-framework",
+    type: "repo" as const,
   },
 ];
 
-function ArticleCard({
-  article,
+function PublicationCard({
+  pub,
   index,
 }: {
-  article: (typeof articles)[0];
+  pub: (typeof publications)[0];
   index: number;
 }) {
   return (
@@ -63,74 +68,70 @@ function ArticleCard({
       transition={{ duration: 0.6, delay: index * 0.15 }}
       className="group relative h-full"
     >
-      <div
-        className="h-full flex flex-col p-6 md:p-8 rounded-2xl glass hover:bg-[rgba(20,28,46,0.8)] transition-all duration-500"
-        style={{
-          borderColor: article.borderColor,
-          borderWidth: "1px",
-        }}
+      <a
+        href={pub.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block h-full"
       >
-        {/* Category Badge */}
-        <div className="mb-5">
-          <span
-            className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs tracking-wider uppercase font-medium"
-            style={{
-              backgroundColor: article.colorBg,
-              border: `1px solid ${article.borderColor}`,
-              color: article.color,
-            }}
-          >
-            <Tag size={12} />
-            {article.category}
-          </span>
-        </div>
-
-        {/* Title */}
-        <h3
-          className="text-lg md:text-xl font-bold mb-3 leading-snug group-hover:text-[#d4a853] transition-colors duration-300"
-          style={{ color: article.color }}
-        >
-          {article.title}
-        </h3>
-
-        {/* Excerpt */}
-        <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-grow">
-          {article.excerpt}
-        </p>
-
-        {/* Meta: Date + Read Time */}
-        <div className="flex items-center gap-4 mb-5 text-xs text-muted-foreground">
-          <span className="flex items-center gap-1.5">
-            <BookOpen size={12} style={{ color: `${article.color}80` }} />
-            {article.date}
-          </span>
-          <span className="flex items-center gap-1.5">
-            <Clock size={12} style={{ color: `${article.color}80` }} />
-            {article.readTime}
-          </span>
-        </div>
-
-        {/* Read Article Link */}
-        <a
-          href="#"
-          className="inline-flex items-center gap-2 text-sm font-medium group/link transition-colors duration-300"
-          style={{ color: article.color }}
-        >
-          Ler Artigo
-          <ArrowRight
-            size={14}
-            className="group-hover/link:translate-x-1 transition-transform duration-300"
-          />
-        </a>
-
-        {/* Hover glow */}
         <div
-          className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          className="h-full flex flex-col p-6 md:p-8 rounded-2xl glass hover:bg-[rgba(20,28,46,0.8)] transition-all duration-500"
           style={{
-            background: `radial-gradient(ellipse at center, ${article.hoverGlow}, transparent 70%)`,
+            borderColor: pub.borderColor,
+            borderWidth: "1px",
           }}
-        />
-      </div>
+        >
+          {/* Category Badge */}
+          <div className="mb-5 flex items-center justify-between">
+            <span
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs tracking-wider uppercase font-medium"
+              style={{
+                backgroundColor: pub.colorBg,
+                border: `1px solid ${pub.borderColor}`,
+                color: pub.color,
+              }}
+            >
+              {pub.type === "paper" && <BookOpen size={12} />}
+              {pub.type === "code" && <BookOpen size={12} />}
+              {pub.type === "repo" && <GitBranch size={12} />}
+              {pub.category}
+            </span>
+            <ExternalLink
+              size={16}
+              className="text-muted-foreground/40 group-hover:text-muted-foreground transition-colors"
+            />
+          </div>
+
+          {/* Title */}
+          <h3
+            className="text-lg md:text-xl font-bold mb-3 leading-snug group-hover:text-[#d4a853] transition-colors duration-300"
+            style={{ color: pub.color }}
+          >
+            {pub.title}
+          </h3>
+
+          {/* Excerpt */}
+          <p className="text-sm text-muted-foreground leading-relaxed mb-6 flex-grow">
+            {pub.excerpt}
+          </p>
+
+          {/* URL */}
+          <div className="flex items-center gap-2 text-xs text-muted-foreground/70 border-t border-[#d4a853]/10 pt-4">
+            {pub.type === "paper" && <Tag size={12} style={{ color: pub.color }} />}
+            {pub.type === "code" && <BookOpen size={12} style={{ color: pub.color }} />}
+            {pub.type === "repo" && <GitBranch size={12} style={{ color: pub.color }} />}
+            <span className="truncate">{pub.urlLabel}</span>
+          </div>
+
+          {/* Hover glow */}
+          <div
+            className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+            style={{
+              background: `radial-gradient(ellipse at center, ${pub.hoverGlow}, transparent 70%)`,
+            }}
+          />
+        </div>
+      </a>
     </motion.div>
   );
 }
@@ -157,46 +158,24 @@ export default function BlogSection() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs md:text-sm text-[#d4a853] tracking-widest uppercase mb-4">
             <BookOpen size={14} />
-            Blog &amp; Insights
+            Publicações & Trabalhos
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-            Pensamento Estratégico{" "}
-            <span className="text-gold-gradient">em Ação</span>
+            Pesquisa &{" "}
+            <span className="text-gold-gradient">Produção Intelectual</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Artigos, análises e reflexões que traduzem inteligência 720° em
-            thought leadership acionável para líderes e organizações que operam
-            em escala global.
+            Artigos, frameworks e código-fonte publicados em plataformas acadêmicas
+            e de código aberto. Toda a produção intelectual com DOI e versionamento.
           </p>
         </motion.div>
 
-        {/* Articles Grid */}
-        <div className="grid md:grid-cols-3 gap-6 md:gap-8 mb-12">
-          {articles.map((article, index) => (
-            <ArticleCard key={article.id} article={article} index={index} />
+        {/* Publications Grid */}
+        <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+          {publications.map((pub, index) => (
+            <PublicationCard key={pub.id} pub={pub} index={index} />
           ))}
         </div>
-
-        {/* CTA Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-60px" }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center"
-        >
-          <Button
-            variant="outline"
-            size="lg"
-            className="border-[#d4a853]/30 text-[#d4a853] hover:bg-[#d4a853]/10 font-semibold text-base px-8 py-6 tracking-wide group"
-          >
-            Ver Todos os Artigos
-            <ArrowRight
-              size={18}
-              className="ml-2 group-hover:translate-x-1 transition-transform"
-            />
-          </Button>
-        </motion.div>
       </div>
     </section>
   );

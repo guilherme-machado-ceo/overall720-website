@@ -26,7 +26,6 @@ import { Button } from "@/components/ui/button";
 import ResearchSection from "@/components/sections/research-section";
 import PortalSection from "@/components/sections/portal-section";
 import BlogSection from "@/components/sections/blog-section";
-import DashboardSection from "@/components/sections/dashboard-section";
 
 /* ───────────────────────── NAVIGATION ───────────────────────── */
 
@@ -46,7 +45,6 @@ function Navbar() {
     { label: "Research", href: "#research" },
     { label: "Pilares", href: "#pillars" },
     { label: "Portal", href: "#portal" },
-    { label: "Dashboard", href: "#dashboard" },
     { label: "Blog", href: "#blog" },
     { label: "Contato", href: "#contact" },
   ];
@@ -911,7 +909,6 @@ function Footer() {
                 { label: "Sobre", href: "#about" },
                 { label: "Research", href: "#research" },
                 { label: "Pilares", href: "#pillars" },
-                { label: "Dashboard", href: "#dashboard" },
                 { label: "Portal", href: "#portal" },
                 { label: "Blog", href: "#blog" },
                 { label: "Contato", href: "#contact" },
@@ -970,8 +967,6 @@ export default function HomePage() {
       <PillarsSection />
       <div className="section-divider" />
       <VisionSection />
-      <div className="section-divider" />
-      <DashboardSection />
       <div className="section-divider" />
       <PortalSection />
       <div className="section-divider" />
