@@ -23,6 +23,10 @@ import {
   Lightbulb,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { ResearchSection } from "@/components/sections/research-section";
+import { PortalSection } from "@/components/sections/portal-section";
+import { BlogSection } from "@/components/sections/blog-section";
+import { DashboardSection } from "@/components/sections/dashboard-section";
 
 /* ───────────────────────── NAVIGATION ───────────────────────── */
 
@@ -39,9 +43,11 @@ function Navbar() {
   const links = [
     { label: "Início", href: "#hero" },
     { label: "Sobre", href: "#about" },
+    { label: "Research", href: "#research" },
     { label: "Pilares", href: "#pillars" },
-    { label: "Visão 720°", href: "#vision" },
-    { label: "Metodologia", href: "#methodology" },
+    { label: "Portal", href: "#portal" },
+    { label: "Dashboard", href: "#dashboard" },
+    { label: "Blog", href: "#blog" },
     { label: "Contato", href: "#contact" },
   ];
 
@@ -903,9 +909,11 @@ function Footer() {
             <div className="space-y-2">
               {[
                 { label: "Sobre", href: "#about" },
+                { label: "Research", href: "#research" },
                 { label: "Pilares", href: "#pillars" },
-                { label: "Visão 720°", href: "#vision" },
-                { label: "Metodologia", href: "#methodology" },
+                { label: "Dashboard", href: "#dashboard" },
+                { label: "Portal", href: "#portal" },
+                { label: "Blog", href: "#blog" },
                 { label: "Contato", href: "#contact" },
               ].map((link) => (
                 <a
@@ -957,9 +965,17 @@ export default function HomePage() {
       <div className="section-divider" />
       <AboutSection />
       <div className="section-divider" />
+      <ResearchSection />
+      <div className="section-divider" />
       <PillarsSection />
       <div className="section-divider" />
       <VisionSection />
+      <div className="section-divider" />
+      <DashboardSection />
+      <div className="section-divider" />
+      <PortalSection />
+      <div className="section-divider" />
+      <BlogSection />
       <div className="section-divider" />
       <MethodologySection />
       <div className="section-divider" />
