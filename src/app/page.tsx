@@ -23,10 +23,10 @@ import {
   Lightbulb,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { ResearchSection } from "@/components/sections/research-section";
-import { PortalSection } from "@/components/sections/portal-section";
-import { BlogSection } from "@/components/sections/blog-section";
-import { DashboardSection } from "@/components/sections/dashboard-section";
+import ResearchSection from "@/components/sections/research-section";
+import PortalSection from "@/components/sections/portal-section";
+import BlogSection from "@/components/sections/blog-section";
+import DashboardSection from "@/components/sections/dashboard-section";
 
 /* ───────────────────────── NAVIGATION ───────────────────────── */
 
