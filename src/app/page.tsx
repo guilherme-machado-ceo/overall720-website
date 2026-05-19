@@ -222,7 +222,7 @@ function HeroSection() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-base md:text-xl text-muted-foreground max-w-3xl mx-auto mb-4 leading-relaxed"
         >
-          A Powerhouse of Venture Builder Strategic Intelligence
+          A Powerhouse of Venture Building Strategic Intelligence
         </motion.p>
         <motion.p
           initial={{ opacity: 0, y: 30 }}
@@ -895,7 +895,7 @@ function Footer() {
               </div>
             </div>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              A Powerhouse of Venture Builder Strategic Intelligence.
+              A Powerhouse of Venture Building Strategic Intelligence.
               720° Advisory & Consulting across Geopolitics, Politech,
               and Global Governance & Sustainability.
             </p>

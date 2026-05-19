@@ -259,14 +259,14 @@ export default function ResearchSection() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs md:text-sm text-[#d4a853] tracking-widest uppercase mb-4">
             <BookOpen size={14} />
-            Research & PublicaÃ§Ãµes
+            Research & Publicações
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Inteligência <span className="text-gold-gradient">Acadêmica & Formal</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Frameworks, publicaÃ§Ãµes e repositórios que formalizam a
-            arquitetura IMIP e suas contribuiÃ§Ãµes para alinhamento
+            Frameworks, publicações e repositórios que formalizam a
+            arquitetura IMIP e suas contribuições para alinhamento
             constitucional em inteligência artificial geral.
           </p>
         </motion.div>
