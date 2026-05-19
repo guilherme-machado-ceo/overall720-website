@@ -20,21 +20,21 @@ const researchCards = [
     badge: "Paper",
     badgeIcon: FileText,
     title: "Do Sal ao Algoritmo",
-    subtitle: "Teoria da Empresa como Instituicao Civilizatoria Pancronica",
+    subtitle: "Teoria da Empresa como Instituição Civilizatória Pancrônica",
     doi: "https://doi.org/10.5281/zenodo.20285002",
     description:
-      "Working paper que estabelece a empresa como operador constante da organizacao do valor humano â€” do sal fenicio ao algoritmo quantico. A tese articula 3.500 anos de historia empresarial para demonstrar que a empresa e uma instituicao civilizatoria pancronica.",
+      "Working paper que estabelece a empresa como operador constante da organização do valor humano — do sal fenício ao algoritmo quântico. A tese articula 3.500 anos de história empresarial para demonstrar que a empresa é uma instituição civilizatória pancrônica, verificável pela religião, pela ciência, pela filosofia e pelas artes.",
     components: [
-      "Empresa como Instituicao Civilizatoria",
+      "Empresa como Instituição Civilizatória",
       "Genealogia do Empreendimento",
       "Ontologia do Imigrante Empreendedor",
-      "Do Sal Fenicio ao Algoritmo Quantico",
-      "Regime de Fluxo Continuo",
+      "Do Sal Fenício ao Algoritmo Quântico",
+      "Regime de Fluxo Contínuo",
       "Impresa Renascentista",
     ],
-    author: "Guilherme Goncalves Machado",
+    author: "Guilherme Gonçalves Machado",
     orcid: "0009-0008-1083-0784",
-    affiliation: "Instituto PCIH3 / Hubstry Deep Tech",
+    affiliation: "Instituto PCIH³ / Hubstry Deep Tech",
     license: "CC BY 4.0",
     github: null,
   },
@@ -271,7 +271,7 @@ export default function ResearchSection() {
           </p>
         </motion.div>
 
-        {/* Research Cards — 2 columns on desktop, stacked on mobile */}
+        {/* Research Cards — 3 columns on desktop, stacked on mobile */}
         <div className="grid lg:grid-cols-3 gap-6 md:gap-8 mb-10">
           {researchCards.map((card, index) => (
             <ResearchCard key={card.id} card={card} index={index} />
