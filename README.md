@@ -1,6 +1,6 @@
 Overall Consultoria 720°
 
-A Powerhouse of Classical \& Quantum Strategic Intelligence720° Advisory \& Consulting across Geopolitics, Politech, and Global Governance \& Sustainability
+A Powerhouse of Venture Building Strategic Intelligence720° Advisory \& Consulting across Geopolitics, Politech, and Global Governance \& Sustainability
 
 
 
