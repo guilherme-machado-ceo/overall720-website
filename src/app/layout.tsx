@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Overall Consultoria 720° | Geopolitical Business Platform",
   description:
-    "A Powerhouse of Classical & Quantum Strategic Intelligence. 720° Advisory & Consulting across Geopolitics, Politech, and Global Governance & Sustainability.",
+    "A Powerhouse of Venture Builder Strategic Intelligence. 720° Advisory & Consulting across Geopolitics, Politech, and Global Governance & Sustainability.",
   keywords: [
     "Overall Consultoria 720",
     "Geopolitical Business Platform",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Overall Consultoria 720°",
     description:
-      "A Powerhouse of Classical & Quantum Strategic Intelligence.",
+      "A Powerhouse of Venture Builder Strategic Intelligence.",
   },
 };
 

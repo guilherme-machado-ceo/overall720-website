@@ -34,7 +34,7 @@ const researchCards = [
     ],
     author: "Guilherme Gonçalves Machado",
     orcid: "0009-0008-1083-0784",
-    affiliation: "PCIH\u00B3 \u2014 Polymath Cyborg Intelligence Hub",
+    affiliation: "PCIH³ — Polymath Cyborg Intelligence Hub",
     license: "PolyForm Noncommercial 1.0.0",
     github: "https://github.com/guilherme-machado-ceo/imip-framework",
   },
@@ -42,11 +42,11 @@ const researchCards = [
     id: "imip-code",
     badge: "Code",
     badgeIcon: Code2,
-    title: "IMIP Framework \u2014 Code Repository",
+    title: "IMIP Framework — Code Repository",
     subtitle: "Computational Implementation of IMIP Architecture",
     doi: "https://doi.org/10.5281/zenodo.19775021",
     description:
-      "C\u00F3digo-fonte que implementa os cinco componentes da arquitetura IMIP, incluindo GuruMatrix 5D, Protocolo IPII (OPDIN), Contencionamento Constitucional, Operador de Analogia Transdom\u00EDnios e Regime de Fluxo Cont\u00EDnuo.",
+      "Código-fonte que implementa os cinco componentes da arquitetura IMIP, incluindo GuruMatrix 5D, Protocolo IPII (OPDIN), Contencionamento Constitucional, Operador de Analogia Transdomínios e Regime de Fluxo Contínuo.",
     components: [
       "GuruMatrix 5D",
       "IPII Protocol (OPDIN)",
@@ -70,7 +70,7 @@ const relatedRepos = [
     color: "#0ea5e9",
   },
   {
-    name: "\u00C1lgebra Hexarrelacional de Signific\u00E2ncia \u03C0\u221Af(A)",
+    name: "Álgebra Hexarrelacional de Significância π√f(A)",
     description: "Mathematical Framework",
     icon: Brain,
     color: "#d4a853",
@@ -236,15 +236,15 @@ export default function ResearchSection() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs md:text-sm text-[#d4a853] tracking-widest uppercase mb-4">
             <BookOpen size={14} />
-            Research & Publica\u00E7\u00F5es
+            Research & Publicações
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Inteligência <span className="text-gold-gradient">Acadêmica & Formal</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Frameworks, publica\u00E7\u00F5es e reposit\u00F3rios que formalizam a
-            arquitetura IMIP e suas contribui\u00E7\u00F5es para alinhamento
-            constitucional em intelig\u00EAncia artificial geral.
+            Frameworks, publicações e repositórios que formalizam a
+            arquitetura IMIP e suas contribuições para alinhamento
+            constitucional em inteligência artificial geral.
           </p>
         </motion.div>
 
