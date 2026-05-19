@@ -26,6 +26,7 @@ import { Button } from "@/components/ui/button";
 import ResearchSection from "@/components/sections/research-section";
 import PortalSection from "@/components/sections/portal-section";
 import BlogSection from "@/components/sections/blog-section";
+import SpeakerSection from "@/components/sections/speaker-section";
 
 /* ───────────────────────── NAVIGATION ───────────────────────── */
 
@@ -46,6 +47,7 @@ function Navbar() {
     { label: "Pilares", href: "#pillars" },
     { label: "Portal", href: "#portal" },
     { label: "Blog", href: "#blog" },
+    { label: "Palestrante", href: "#speaker" },
     { label: "Contato", href: "#contact" },
   ];
 
@@ -76,7 +78,7 @@ function Navbar() {
                 Overall 720°
               </span>
               <span className="text-[10px] md:text-xs text-muted-foreground tracking-widest uppercase hidden sm:block">
-                Geopolitical Business Platform
+                Venture Building
               </span>
             </div>
           </a>
@@ -195,7 +197,7 @@ function HeroSection() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs md:text-sm text-[#d4a853] tracking-widest uppercase">
             <Orbit size={14} />
-            Geopolitical Business Platform
+            Venture Building
           </span>
         </motion.div>
 
@@ -911,6 +913,7 @@ function Footer() {
                 { label: "Pilares", href: "#pillars" },
                 { label: "Portal", href: "#portal" },
                 { label: "Blog", href: "#blog" },
+    { label: "Palestrante", href: "#speaker" },
                 { label: "Contato", href: "#contact" },
               ].map((link) => (
                 <a
@@ -944,7 +947,7 @@ function Footer() {
             © {new Date().getFullYear()} Overall Consultoria 720°. Todos os direitos reservados.
           </p>
           <p className="text-xs text-muted-foreground/40">
-            Geopolitical Business Platform — Visão 720° do Satélite à Estratégia
+            Venture Building — Visão 720° do Satélite à Estratégia
           </p>
         </div>
       </div>
@@ -968,6 +971,7 @@ export default function HomePage() {
       <div className="section-divider" />
       <VisionSection />
       <div className="section-divider" />
+      <SpeakerSection />
       <PortalSection />
       <div className="section-divider" />
       <BlogSection />

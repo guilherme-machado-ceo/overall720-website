@@ -16,6 +16,29 @@ import {
 
 const researchCards = [
   {
+    id: "do-sal-ao-algoritmo",
+    badge: "Paper",
+    badgeIcon: FileText,
+    title: "Do Sal ao Algoritmo",
+    subtitle: "Teoria da Empresa como Instituicao Civilizatoria Pancronica",
+    doi: "https://doi.org/10.5281/zenodo.20285002",
+    description:
+      "Working paper que estabelece a empresa como operador constante da organizacao do valor humano â€” do sal fenicio ao algoritmo quantico. A tese articula 3.500 anos de historia empresarial para demonstrar que a empresa e uma instituicao civilizatoria pancronica.",
+    components: [
+      "Empresa como Instituicao Civilizatoria",
+      "Genealogia do Empreendimento",
+      "Ontologia do Imigrante Empreendedor",
+      "Do Sal Fenicio ao Algoritmo Quantico",
+      "Regime de Fluxo Continuo",
+      "Impresa Renascentista",
+    ],
+    author: "Guilherme Goncalves Machado",
+    orcid: "0009-0008-1083-0784",
+    affiliation: "Instituto PCIH3 / Hubstry Deep Tech",
+    license: "CC BY 4.0",
+    github: null,
+  },
+  {
     id: "imip-paper",
     badge: "Paper",
     badgeIcon: FileText,
@@ -236,20 +259,20 @@ export default function ResearchSection() {
         >
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs md:text-sm text-[#d4a853] tracking-widest uppercase mb-4">
             <BookOpen size={14} />
-            Research & Publicações
+            Research & PublicaÃ§Ãµes
           </span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
             Inteligência <span className="text-gold-gradient">Acadêmica & Formal</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Frameworks, publicações e repositórios que formalizam a
-            arquitetura IMIP e suas contribuições para alinhamento
+            Frameworks, publicaÃ§Ãµes e repositórios que formalizam a
+            arquitetura IMIP e suas contribuiÃ§Ãµes para alinhamento
             constitucional em inteligência artificial geral.
           </p>
         </motion.div>
 
         {/* Research Cards — 2 columns on desktop, stacked on mobile */}
-        <div className="grid lg:grid-cols-2 gap-6 md:gap-8 mb-10">
+        <div className="grid lg:grid-cols-3 gap-6 md:gap-8 mb-10">
           {researchCards.map((card, index) => (
             <ResearchCard key={card.id} card={card} index={index} />
           ))}

@@ -14,12 +14,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Overall Consultoria 720° | Geopolitical Business Platform",
+  title: "Overall Consultoria 720° | Venture Building Strategic Intelligence",
   description:
-    "A Powerhouse of Venture Builder Strategic Intelligence. 720° Advisory & Consulting across Geopolitics, Politech, and Global Governance & Sustainability.",
+    "A Powerhouse of Venture Building Strategic Intelligence. 720° Advisory & Consulting across Geopolitics, Politech, and Global Governance & Sustainability.",
   keywords: [
     "Overall Consultoria 720",
-    "Geopolitical Business Platform",
+    "Venture Building Strategic Intelligence",
     "Inteligência Estratégica",
     "Geopolítica",
     "Politech",
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     icon: "/logo-overall720.jpg",
   },
   openGraph: {
-    title: "Overall Consultoria 720° | Geopolitical Business Platform",
+    title: "Overall Consultoria 720° | Venture Building Strategic Intelligence",
     description:
       "720° Advisory & Consulting across Geopolitics, Politech, and Global Governance & Sustainability.",
     url: "https://overall720.xyz",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Overall Consultoria 720°",
     description:
-      "A Powerhouse of Venture Builder Strategic Intelligence.",
+      "A Powerhouse of Venture Building Strategic Intelligence.",
   },
 };
 
