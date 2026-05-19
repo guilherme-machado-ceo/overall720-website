@@ -158,7 +158,7 @@ function HeroSection() {
     <section
       ref={ref}
       id="hero"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden"
+      className="relative min-h-screen flex items-center justify-center pt-36 md:pt-44 overflow-hidden"
     >
       {/* Background layers */}
       <div className="absolute inset-0 bg-[#0a0f1a]" />
