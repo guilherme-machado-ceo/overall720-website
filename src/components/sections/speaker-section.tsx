@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import { motion } from "framer-motion";
 import {
@@ -7,16 +7,16 @@ import {
 } from "lucide-react";
 
 const keynoteCards = [
-  { id: "empreender-e-valentia", badge: "Keynote", title: "Empreender \u00e9 Valentia", subtitle: "Do Sal ao Algoritmo: A Genealogia Civilizat\u00f3ria do Empreendimento", description: "3.500 anos de hist\u00f3ria empresarial \u2014 dos mercadores fen\u00edcios ao Large Language Model. Empreender \u00e9 um ato de coragem antes de ser um ato econ\u00f4mico.", format: "60\u201390 min \u00b7 Presencial ou Remoto", languages: "PT \u00b7 EN \u00b7 ES \u00b7 DE", color: "#d4a853", colorBg: "rgba(212, 168, 83, 0.1)", borderColor: "rgba(212, 168, 83, 0.2)", hoverGlow: "rgba(212, 168, 83, 0.06)" },
-  { id: "digital-camada", badge: "Keynote", title: "Digital \u00e9 Camada. Anal\u00f3gico \u00e9 Substrato.", subtitle: "Ontologia de tr\u00eas camadas: digital \u00b7 anal\u00f3gico \u00b7 qu\u00e2ntico", description: "Para l\u00edderes de tecnologia e equipes de transforma\u00e7\u00e3o digital que precisam entender por que a desmaterializa\u00e7\u00e3o \u00e9 uma ilus\u00e3o estrat\u00e9gica.", format: "45\u201360 min \u00b7 Presencial ou Remoto", languages: "PT \u00b7 EN", color: "#0ea5e9", colorBg: "rgba(14, 165, 233, 0.1)", borderColor: "rgba(14, 165, 233, 0.2)", hoverGlow: "rgba(14, 165, 233, 0.06)" },
-  { id: "inteligencia-negocio", badge: "Keynote", title: "A Intelig\u00eancia que Sempre Foi Neg\u00f3cio", subtitle: "Geopol\u00edtica como Business Intelligence: Uma Hist\u00f3ria de 3.000 Anos", description: "Dos fen\u00edcios a Veneza, da VOC ao Overall 720\u00b0 \u2014 geopol\u00edtica e intelig\u00eancia de neg\u00f3cios nunca foram coisas diferentes.", format: "45\u201360 min \u00b7 Presencial ou Remoto", languages: "PT \u00b7 EN", color: "#34d399", colorBg: "rgba(52, 211, 153, 0.1)", borderColor: "rgba(52, 211, 153, 0.2)", hoverGlow: "rgba(52, 211, 153, 0.06)" },
+  { id: "empreender-e-valentia", badge: "Keynote", title: "Empreender é Valentia", subtitle: "Do Sal ao Algoritmo: A Genealogia Civilizatória do Empreendimento", description: "3.500 anos de história empresarial \u2014 dos mercadores fenícios ao Large Language Model. Empreender é um ato de coragem antes de ser um ato econômico.", format: "60\u201390 min \u00b7 Presencial ou Remoto", languages: "PT \u00b7 EN \u00b7 ES \u00b7 DE", color: "#d4a853", colorBg: "rgba(212, 168, 83, 0.1)", borderColor: "rgba(212, 168, 83, 0.2)", hoverGlow: "rgba(212, 168, 83, 0.06)" },
+  { id: "digital-camada", badge: "Keynote", title: "Digital é Camada. Analógico é Substrato.", subtitle: "Ontologia de três camadas: digital \u00b7 analógico \u00b7 qu\u00e2ntico", description: "Para líderes de tecnologia e equipes de transformação digital que precisam entender por que a desmaterialização é uma ilusão estratégica.", format: "45\u201360 min \u00b7 Presencial ou Remoto", languages: "PT \u00b7 EN", color: "#0ea5e9", colorBg: "rgba(14, 165, 233, 0.1)", borderColor: "rgba(14, 165, 233, 0.2)", hoverGlow: "rgba(14, 165, 233, 0.06)" },
+  { id: "inteligencia-negocio", badge: "Keynote", title: "A Inteligência que Sempre Foi Negócio", subtitle: "Geopolítica como Business Intelligence: Uma História de 3.000 Anos", description: "Dos fenícios a Veneza, da VOC ao Overall 720\u00b0 \u2014 geopolítica e inteligência de negócios nunca foram coisas diferentes.", format: "45\u201360 min \u00b7 Presencial ou Remoto", languages: "PT \u00b7 EN", color: "#34d399", colorBg: "rgba(52, 211, 153, 0.1)", borderColor: "rgba(52, 211, 153, 0.2)", hoverGlow: "rgba(52, 211, 153, 0.06)" },
 ];
 
 const consultingItems = [
-  { title: "Intelig\u00eancia de Mercados Lingu\u00edsticos", description: "Entrar e crescer em mercados de l\u00edngua n\u00e3o-inglesa com precis\u00e3o cultural.", icon: "Globe2", color: "#d4a853", colorBg: "rgba(212, 168, 83, 0.1)", borderColor: "rgba(212, 168, 83, 0.2)", hoverGlow: "rgba(212, 168, 83, 0.06)" },
-  { title: "Empresa como Institui\u00e7\u00e3o", description: "Miss\u00e3o, vis\u00e3o, valores com profundidade filos\u00f3fica e impacto duradouro.", icon: "Brain", color: "#0ea5e9", colorBg: "rgba(14, 165, 233, 0.1)", borderColor: "rgba(14, 165, 233, 0.2)", hoverGlow: "rgba(14, 165, 233, 0.06)" },
-  { title: "Fine-Tuning de IA Humanista", description: "Calibrar modelos com rigor lingu\u00edstico e cultural para resultados \u00e9ticos.", icon: "Sparkles", color: "#34d399", colorBg: "rgba(52, 211, 153, 0.1)", borderColor: "rgba(52, 211, 153, 0.2)", hoverGlow: "rgba(52, 211, 153, 0.06)" },
-  { title: "Venture Building & Estrat\u00e9gia", description: "Consultoria estrat\u00e9gica completa: de idea\u00e7\u00e3o a scaling, com vis\u00e3o 720\u00b0.", icon: "MessageSquare", color: "#a78bfa", colorBg: "rgba(167, 139, 250, 0.1)", borderColor: "rgba(167, 139, 250, 0.2)", hoverGlow: "rgba(167, 139, 250, 0.06)" },
+  { title: "Inteligência de Mercados Linguísticos", description: "Entrar e crescer em mercados de língua não-inglesa com precisão cultural.", icon: "Globe2", color: "#d4a853", colorBg: "rgba(212, 168, 83, 0.1)", borderColor: "rgba(212, 168, 83, 0.2)", hoverGlow: "rgba(212, 168, 83, 0.06)" },
+  { title: "Empresa como Instituição", description: "Missão, visão, valores com profundidade filosófica e impacto duradouro.", icon: "Brain", color: "#0ea5e9", colorBg: "rgba(14, 165, 233, 0.1)", borderColor: "rgba(14, 165, 233, 0.2)", hoverGlow: "rgba(14, 165, 233, 0.06)" },
+  { title: "Fine-Tuning de IA Humanista", description: "Calibrar modelos com rigor linguístico e cultural para resultados éticos.", icon: "Sparkles", color: "#34d399", colorBg: "rgba(52, 211, 153, 0.1)", borderColor: "rgba(52, 211, 153, 0.2)", hoverGlow: "rgba(52, 211, 153, 0.06)" },
+  { title: "Venture Building & Estratégia", description: "Consultoria estratégica completa: de ideação a scaling, com visão 720\u00b0.", icon: "MessageSquare", color: "#a78bfa", colorBg: "rgba(167, 139, 250, 0.1)", borderColor: "rgba(167, 139, 250, 0.2)", hoverGlow: "rgba(167, 139, 250, 0.06)" },
 ];
 
 function KeynoteCard({ card, index }: { card: (typeof keynoteCards)[0]; index: number }) {
@@ -73,24 +73,24 @@ export default function SpeakerSection() {
       <div className="absolute bottom-20 right-[30%] w-1 h-1 bg-[#d4a853]/15 rounded-full animate-float" style={{ animationDelay: "3s" }} />
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-100px" }} transition={{ duration: 0.6 }} className="text-center mb-16 md:mb-20">
-          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs md:text-sm text-[#d4a853] tracking-widest uppercase mb-4"><Mic size={14} />Servi\u00e7os</span>
+          <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass text-xs md:text-sm text-[#d4a853] tracking-widest uppercase mb-4"><Mic size={14} />Serviços</span>
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">Palestras & <span className="text-gold-gradient">Consultoria</span></h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">Keynotes e workshops que conectam 3.500 anos de hist\u00f3ria civilizat\u00f3ria aos desafios estrat\u00e9gicos do presente \u2014 para confer\u00eancias, corpora\u00e7\u00f5es e equipes de lideran\u00e7a.</p>
+          <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">Keynotes e workshops que conectam 3.500 anos de história civilizatória aos desafios estratégicos do presente \u2014 para conferências, corporações e equipes de liderança.</p>
         </motion.div>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-16 md:mb-20">{keynoteCards.map((card, index) => (<KeynoteCard key={card.id} card={card} index={index} />))}</div>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.6, delay: 0.2 }} className="max-w-3xl mx-auto text-center mb-12">
           <div className="flex justify-center mb-6"><div className="w-12 h-12 rounded-full bg-[rgba(212,168,83,0.1)] border border-[rgba(212,168,83,0.2)] flex items-center justify-center"><Quote size={20} className="text-[#d4a853]" /></div></div>
-          <blockquote className="text-base md:text-lg italic text-muted-foreground leading-relaxed mb-4">&ldquo;Empreender \u00e9 valentia. N\u00e3o a temeridade do que ignora o risco \u2014 mas a coragem de quem reconhece o mar, conhece o cemit\u00e9rio, e embarca assim mesmo.&rdquo;</blockquote>
-          <cite className="text-sm text-[#d4a853]/80 not-italic font-medium">\u2014 Guilherme Gon\u00e7alves Machado</cite>
+          <blockquote className="text-base md:text-lg italic text-muted-foreground leading-relaxed mb-4">&ldquo;Empreender é valentia. Não a temeridade do que ignora o risco \u2014 mas a coragem de quem reconhece o mar, conhece o cemitério, e embarca assim mesmo.&rdquo;</blockquote>
+          <cite className="text-sm text-[#d4a853]/80 not-italic font-medium">\u2014 Guilherme Gonçalves Machado</cite>
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-60px" }} transition={{ duration: 0.5, delay: 0.3 }} className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-20 md:mb-28">
           <a href="#contact" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-gradient-to-r from-[#d4a853] to-[#e8c97a] text-[#0a0f1a] font-semibold text-sm tracking-wide hover:from-[#e8c97a] hover:to-[#d4a853] transition-all duration-300 shadow-lg shadow-[rgba(212,168,83,0.2)] hover:shadow-[rgba(212,168,83,0.35)] hover:-translate-y-0.5"><MessageSquare size={16} />Agendar Palestra<ArrowRight size={16} /></a>
-          <a href="#blog" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-transparent border border-[rgba(212,168,83,0.3)] text-[#d4a853] font-semibold text-sm tracking-wide hover:bg-[rgba(212,168,83,0.08)] hover:border-[rgba(212,168,83,0.5)] transition-all duration-300 hover:-translate-y-0.5"><BookOpen size={16} />Ver Publica\u00e7\u00f5es<ArrowRight size={16} /></a>
+          <a href="#blog" className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl bg-transparent border border-[rgba(212,168,83,0.3)] text-[#d4a853] font-semibold text-sm tracking-wide hover:bg-[rgba(212,168,83,0.08)] hover:border-[rgba(212,168,83,0.5)] transition-all duration-300 hover:-translate-y-0.5"><BookOpen size={16} />Ver Publicações<ArrowRight size={16} /></a>
         </motion.div>
         <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: "-80px" }} transition={{ duration: 0.6 }}>
           <div className="text-center mb-10">
-            <h3 className="text-2xl md:text-3xl font-bold mb-3"><span className="text-gold-gradient">Consultoria Estrat\u00e9gica</span></h3>
-            <p className="text-sm text-muted-foreground max-w-xl mx-auto leading-relaxed">Servi\u00e7os sob medida para organiza\u00e7\u00f5es que buscam profundidade estrat\u00e9gica, rigor cultural e impacto institucional.</p>
+            <h3 className="text-2xl md:text-3xl font-bold mb-3"><span className="text-gold-gradient">Consultoria Estratégica</span></h3>
+            <p className="text-sm text-muted-foreground max-w-xl mx-auto leading-relaxed">Serviços sob medida para organizações que buscam profundidade estratégica, rigor cultural e impacto institucional.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">{consultingItems.map((item, index) => (<ConsultingCard key={item.title} item={item} index={index} />))}</div>
         </motion.div>

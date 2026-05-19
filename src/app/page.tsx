@@ -827,7 +827,7 @@ function ContactSection() {
 
             <div className="section-divider mb-8" />
 
-            <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-4" onSubmit={(e) => { e.preventDefault(); const q = e.target.querySelectorAll("input, textarea"); const t = encodeURIComponent("Nome: " + q[0].value + "\nE-mail: " + q[1].value + "\nEmpresa: " + q[2].value + "\nMensagem: " + q[3].value); window.open("https://wa.me/5521971213054?text=" + t, "_blank"); }}>
               <div className="grid md:grid-cols-2 gap-4">
                 <input
                   type="text"
