@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { BookOpen, ExternalLink, Tag, GitBranch } from "lucide-react";
+import { BookOpen, ExternalLink, Tag, GitBranch, FileText } from "lucide-react";
 
 /* ───────────────────────── BLOG & PUBLICAÇÕES REAIS ───────────────────────── */
 
@@ -52,6 +52,67 @@ const publications = [
     type: "repo" as const,
   },
 ];
+
+/* Artigo autoral em destaque (LinkedIn da Overall 720) */
+const featuredArticle = {
+  category: "Artigo · LinkedIn",
+  title:
+    "Julgamento empresarial e inteligência artificial: por que a decisão de delegar continua humana",
+  excerpt:
+    "A partir do capítulo 4 de The Economic Structure of Corporate Law (Easterbrook & Fischel, 1991), o artigo sustenta que decidir o que delegar à IA é também exercício de julgamento empresarial. Examina os efeitos da IA antes e depois da decisão e delimita o que a Lei das S.A. e a CVM permitem afirmar sobre a responsabilidade de quem delega.",
+  date: "Out. 2026",
+  url: "https://www.linkedin.com/pulse/julgamento-empresarial-e-intelig%C3%AAncia-artificial-pbc2f/",
+  urlLabel: "linkedin.com/pulse/julgamento-empresarial-e-inteligencia-artificial",
+};
+
+function FeaturedArticle() {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ duration: 0.6 }}
+      className="group relative mb-6 md:mb-8"
+    >
+      <a
+        href={featuredArticle.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="block"
+      >
+        <div
+          className="relative flex flex-col p-6 md:p-10 rounded-2xl glass-strong hover:bg-[rgba(20,28,46,0.8)] transition-all duration-500"
+          style={{ border: "1px solid rgba(212, 168, 83, 0.3)" }}
+        >
+          <div className="mb-5 flex items-center justify-between gap-4">
+            <span
+              className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs tracking-wider uppercase font-medium"
+              style={{
+                backgroundColor: "rgba(212, 168, 83, 0.1)",
+                border: "1px solid rgba(212, 168, 83, 0.3)",
+                color: "#d4a853",
+              }}
+            >
+              <FileText size={12} />
+              {featuredArticle.category}
+            </span>
+            <span className="text-xs text-muted-foreground/70">{featuredArticle.date}</span>
+          </div>
+          <h3 className="text-xl md:text-2xl font-bold mb-4 leading-snug text-[#d4a853]">
+            {featuredArticle.title}
+          </h3>
+          <p className="text-sm md:text-base text-muted-foreground leading-relaxed mb-6 max-w-4xl">
+            {featuredArticle.excerpt}
+          </p>
+          <div className="flex items-center gap-2 text-xs text-muted-foreground/70 border-t border-[#d4a853]/10 pt-4">
+            <ExternalLink size={12} className="text-[#d4a853]" />
+            <span className="truncate">{featuredArticle.urlLabel}</span>
+          </div>
+        </div>
+      </a>
+    </motion.div>
+  );
+}
 
 function PublicationCard({
   pub,
@@ -165,10 +226,13 @@ export default function BlogSection() {
             <span className="text-gold-gradient">Produção Intelectual</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Artigos, frameworks e código-fonte publicados em plataformas acadêmicas
-            e de código aberto. Toda a produção intelectual com DOI e versionamento.
+            Artigos, frameworks e código-fonte publicados em plataformas acadêmicas,
+            de código aberto e profissionais. Os trabalhos de pesquisa têm DOI e versionamento.
           </p>
         </motion.div>
+
+        {/* Artigo em destaque */}
+        <FeaturedArticle />
 
         {/* Publications Grid */}
         <div className="grid md:grid-cols-3 gap-6 md:gap-8">
