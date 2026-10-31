@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     title: "Overall Consultoria 720° | Venture Building Strategic Intelligence",
     description:
       "720° Advisory & Consulting across Geopolitics, Politech, and Global Governance & Sustainability.",
-    url: "https://overall720.xyz",
+    url: "https://overall720.hubstry.dev",
     siteName: "Overall Consultoria 720°",
     type: "website",
   },

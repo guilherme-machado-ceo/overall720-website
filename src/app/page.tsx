@@ -812,7 +812,7 @@ function ContactSection() {
                   <Globe2 size={20} className="text-emerald-400 mt-1 flex-shrink-0" />
                   <div>
                     <div className="text-sm font-semibold mb-1">Website</div>
-                    <a href="https://overall720.xyz" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-emerald-400 transition-colors">overall720.xyz</a>
+                    <a href="https://overall720.hubstry.dev" target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-emerald-400 transition-colors">overall720.hubstry.dev</a>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -935,7 +935,7 @@ function Footer() {
             <div className="space-y-2 text-sm text-muted-foreground">
               <a href="mailto:guilhermemachado.ceo@hubstry.dev" className="block hover:text-[#d4a853] transition-colors">guilhermemachado.ceo@hubstry.dev</a>
               <a href="https://wa.me/5521971213054" target="_blank" rel="noopener noreferrer" className="block hover:text-[#d4a853] transition-colors">+55 21 97121-3054</a>
-              <a href="https://overall720.xyz" target="_blank" rel="noopener noreferrer" className="block hover:text-[#d4a853] transition-colors">overall720.xyz</a>
+              <a href="https://overall720.hubstry.dev" target="_blank" rel="noopener noreferrer" className="block hover:text-[#d4a853] transition-colors">overall720.hubstry.dev</a>
             </div>
           </div>
         </div>
